@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import DataLabeling from '@/components/DataLabeling';
-
+//testing entry point
 const Home: React.FC = () => {
   return (
     <div>
