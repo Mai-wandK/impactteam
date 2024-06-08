@@ -1,34 +1,42 @@
 import React from 'react';
 
-const DataLabeling: React.FC = () => {
+const AISection: React.FC = () => {
   return (
-    <div className="bg-black text-white py-20 px-8">
-      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
-        <div className="flex-1">
-          <h2 className="text-4xl font-bold mb-4">Data Labeling</h2>
+    <div className="bg-gray-900 text-white py-20 px-8">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="glassy-background">
+          <h3 className="text-sm font-semibold mb-2">SCALE DONOVAN</h3>
+          <h2 className="text-3xl font-bold mb-4">AI-Powered Decision-Making for Defense</h2>
           <p className="text-lg mb-6">
-            The best quality data to fuel the best performing models
+            AI-powered decision-making support: plan, analyze, and act in minutes.
           </p>
           <div className="flex space-x-4 mb-6">
-            <button className="bg-gray-700 text-white py-2 px-4 rounded-full">3D</button>
-            <button className="bg-gray-700 text-white py-2 px-4 rounded-full">Image</button>
-            <button className="bg-gray-700 text-white py-2 px-4 rounded-full">Mapping</button>
-            <button className="bg-gray-700 text-white py-2 px-4 rounded-full">Text</button>
-            <button className="bg-gray-700 text-white py-2 px-4 rounded-full">Audio</button>
+            <div className="flex-1">
+              <img src="/path/to/your/first-image.png" alt="Decision Making" className="rounded-lg" />
+            </div>
           </div>
           <p className="mb-6">
-            Scale has pioneered in the data labeling industry by combining AI-based techniques with human-in-the-loop, delivering labeled data at unprecedented quality, scalability, and efficiency.
+            Donovan, put any known foreign ship movements over the past 48 hours on the map, and flag any out-of-pattern activity.
           </p>
-          <a href="#" className="bg-gradient-to-r from-purple-500 to-blue-500 text-white py-2 px-4 rounded-full hover:bg-purple-700 transition duration-200">
-            Label My Data →
-          </a>
         </div>
-        <div className="flex-1">
-          <img src="/path/to/your/image.png" alt="Data Labeling Visualization" className="rounded-lg" />
+        <div className="glassy-background">
+          <h3 className="text-sm font-semibold mb-2">SCALE ENTERPRISE GENAI PLATFORM</h3>
+          <h2 className="text-3xl font-bold mb-4">AI for the Enterprise</h2>
+          <p className="text-lg mb-6">
+            Transform your data into customized enterprise-ready Generative AI applications.
+          </p>
+          <div className="flex space-x-4 mb-6">
+            <div className="flex-1">
+              <img src="/path/to/your/second-image.png" alt="Enterprise AI" className="rounded-lg" />
+            </div>
+          </div>
+          <p className="mb-6">
+            A list of all models that are available to use in active deployments. This includes models delivered by Scale as well as base models.
+          </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default DataLabeling;
+export default AISection;
