@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import FAQs from '@/components/FAQs';
 import Reviews from '@/components/Reviews';
 import Navbar from '@/components/Navbar';
+import DataLabeling from '@/components/DataLabeling';
 import AnnouncementBanners from '@/components/ AnnouncementBanners';
 import MockupWithText from '@/components/MockupWithText';
 import WhyUs from '@/components/WhyUs';
@@ -18,8 +19,8 @@ const Home: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-      <AnnouncementBanners />
-      <Navbar />
+        <AnnouncementBanners />
+        <Navbar />
         <Hero />
         <MockupWithText />
         <WhyUs/>
