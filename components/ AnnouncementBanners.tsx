@@ -7,7 +7,7 @@ const AnnouncementBanner: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
             <p className="text-xs text-white/80 uppercase tracking-wide">
-              Preview of Preline
+              Impact Team
             </p>
             <p className="mt-1 text-sm sm:text-base font-medium text-white">
               Sign up to get unlimited updates. No credit card required.
