@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Logo from "@/public/ImpactTeamLogo.png";
@@ -6,13 +6,31 @@ import Logo from "@/public/ImpactTeamLogo.png";
 const Navbar: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [navbarFixed, setNavbarFixed] = useState(false);
+
+    // Function to handle scrolling and fix navbar
+    const handleScroll = () => {
+        if (window.scrollY > 50) { // Adjust as needed based on your design
+            setNavbarFixed(true);
+        } else {
+            setNavbarFixed(false);
+        }
+    };
+
+    // Attach scroll event listener
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-        <nav className="bg-white bg-opacity-30 backdrop-blur-md border-b border-gray-200 dark:border-gray-600 dark:bg-gray-900 dark:bg-opacity-30 dark:backdrop-blur-md shadow-lg">
+        <nav
+            className={` fixed top-0 w-full  z-50 ${navbarFixed ? 'bg-white border-b border-gray-200' : ''}`}
+        >
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
                 <a href="https://impactteam.com" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <Image src={Logo} className="h-8" alt="ImpactTeam Logo" width={60} height={60} />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">ImpactTeam</span>
+                    <span className="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-gray-300">ImpactTeam</span>
                 </a>
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
@@ -106,20 +124,8 @@ const Navbar: React.FC = () => {
                             </li>
                             <li>
                                 <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <div className="font-semibold">Earning Rewards</div>
-                                    <span className="text-sm text-gray-500 dark:text-gray-400">Earn rewards and share on LinkedIn.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <div className="font-semibold">Virtual Events</div>
-                                    <span className="text-sm text-gray-500 dark:text-gray-400">Join virtual events like hackathons.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <div className="font-semibold">Incorporate AI</div>
-                                    <span className="text-sm text-gray-500 dark:text-gray-400">Utilize AI to enhance user experience.</span>
+                                    <div className="font-semibold">Rewards</div>
+                                    <span className="text-sm text-gray-500 dark:text-gray-400">Earn rewards for achievements.</span>
                                 </a>
                             </li>
                         </ul>

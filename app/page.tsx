@@ -9,6 +9,9 @@ import DataLabeling from '@/components/DataLabeling';
 import AnnouncementBanners from '@/components/ AnnouncementBanners';
 import MockupWithText from '@/components/MockupWithText';
 import WhyUs from '@/components/WhyUs';
+import { ImagesSliderDemo } from '@/components/ui/ImagesSliderDemo';
+import { CanvasRevealEffectDemo } from '@/components/ui/CanvasRevealEffectDemo';
+import { GlobeDemo } from '@/components/ui/GlobeDemo';
 
 const Home: React.FC = () => {
   return (
@@ -21,6 +24,9 @@ const Home: React.FC = () => {
       <main>
         {/* <AnnouncementBanners /> */}
         <Navbar />
+        <ImagesSliderDemo />
+        <CanvasRevealEffectDemo />
+        <GlobeDemo />
         <Hero />
         <MockupWithText />
         <WhyUs/>
